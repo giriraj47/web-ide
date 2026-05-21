@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ide-bg: #1e1e1e;
+  --color-ide-panel: #252526;
+  --color-ide-border: #333333;
+  --color-ide-accent: #007acc;
+  --color-ide-text: #cccccc;
+  --color-ide-text-active: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-ide-bg text-ide-text overflow-hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #464646;
+  border: 2px solid #1e1e1e;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Terminal custom styles overrides */
+.xterm .xterm-viewport {
+  /* Hide xterm scrollbar in favor of a sleeker look or rely on xterm's own */
+}
