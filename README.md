@@ -11,15 +11,15 @@ The application is structured as a **Decoupled Client-Server Architecture** wher
 
 ```mermaid
 graph TD
-    subgraph Browser (Client-Side Workspace)
-        subgraph React App
+    subgraph Browser ["Browser (Client-Side Workspace)"]
+        subgraph ReactApp ["React App"]
             UI[React UI Dashboard]
             Monaco[Monaco Code Editor]
             XTerm[XTerm Terminal]
             Preview[Iframe Preview Pane]
         end
         
-        subgraph WebContainer Sandbox
+        subgraph WebContainerSandbox ["WebContainer Sandbox"]
             WC[WebAssembly NodeJS Runtime]
             VFS[Virtual File System]
             JSH[JS Shell]
@@ -27,12 +27,12 @@ graph TD
         end
     end
     
-    subgraph Backend Server (Node.js/Express)
+    subgraph Backend ["Backend Server (Node.js/Express)"]
         API[Express REST API]
         Auth[JWT & Bcrypt Guard]
     end
     
-    subgraph Persistence Layer
+    subgraph PersistenceLayer ["Persistence Layer"]
         DB[(MongoDB Atlas)]
     end
 
