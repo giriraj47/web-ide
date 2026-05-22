@@ -1,7 +1,7 @@
 # 🚀 Next-Gen Web IDE: In-Browser Development Environment
-### *Advanced Web Engineering - Assignment Submission*
+### *Web-IDE - Assignment Submission*
 
-A full-featured, state-of-the-art Web IDE running a complete, sandboxed Node.js development environment **entirely inside the browser**. Utilizing StackBlitz WebContainers, Monaco Editor, XTerm.js, and a robust Express/MongoDB backend, this platform enables users to write, run, terminal-interact, preview, and save full-stack web applications without installing a single local dependency.
+A full-featured Web IDE running a complete, sandboxed Node.js development environment **entirely inside the browser**. Utilizing StackBlitz WebContainers, Monaco Editor, XTerm.js, and a robust Express/MongoDB backend, this platform enables users to write, run, terminal-interact, preview, and save full-stack web applications without installing a single local dependency.
 
 ---
 
@@ -88,6 +88,7 @@ This project was developed with a collaborative **AI-Assisted Pair Programming S
 2.  **WebContainer Bootstrap & Singleton Management**: Writing clean React hooks that boot the async WebContainer can be prone to race conditions (e.g. booting the container multiple times due to React StrictMode or hot-reloading). AI helped configure the singleton pattern `let webcontainerInstance = null` and coordinate its async setup sequence perfectly.
 3.  **Real-time IO Piping**: AI was used to draft clean stream handling, piping the WebContainer's raw output `ReadableStream` into `Xterm.js` and managing the terminal's disposal lifecycle to prevent serious memory leaks.
 4.  **Security Configurations**: AI aided in writing secure Express controllers, structuring JWT token signs and verification middlewares, and ensuring MongoDB credentials/tokens are never committed by advising on environment setups and drafting robust `.gitignore` rules.
+
 
 ---
 
