@@ -1,7 +1,7 @@
 # 🚀 Next-Gen Web IDE: In-Browser Development Environment
-### *Advanced Web Engineering - Assignment Submission*
+### *Web-IDE - Assignment Submission*
 
-A full-featured, state-of-the-art Web IDE running a complete, sandboxed Node.js development environment **entirely inside the browser**. Utilizing StackBlitz WebContainers, Monaco Editor, XTerm.js, and a robust Express/MongoDB backend, this platform enables users to write, run, terminal-interact, preview, and save full-stack web applications without installing a single local dependency.
+A full-featured Web IDE running a complete, sandboxed Node.js development environment **entirely inside the browser**. Utilizing StackBlitz WebContainers, Monaco Editor, XTerm.js, and a robust Express/MongoDB backend, this platform enables users to write, run, terminal-interact, preview, and save full-stack web applications without installing a single local dependency.
 
 ---
 
