@@ -9,7 +9,7 @@ export function useWebContainer() {
   const [webcontainer, setWebcontainer] = useState(null);
   const [isBooting, setIsBooting] = useState(false);
   const [error, setError] = useState(null);
-  const [projectTitle, setProjectTitle] = useState('Untitled Project');
+  const [projectTitle, setProjectTitle] = useState(() => "untitled-" + crypto.randomUUID().slice(0, 4));
 
   useEffect(() => {
     async function bootContainer() {
@@ -24,11 +24,11 @@ export function useWebContainer() {
         setIsBooting(true);
         // Call only once
         webcontainerInstance = await WebContainer.boot();
-        
+
         let filesToMount = initialFiles;
         const urlParams = new URLSearchParams(window.location.search);
         const projectId = urlParams.get('projectId');
-        
+
         if (projectId) {
           try {
             const project = await getProjectById(projectId);
@@ -43,7 +43,7 @@ export function useWebContainer() {
 
         // Mount initial files
         await webcontainerInstance.mount(filesToMount);
-        
+
         setWebcontainer(webcontainerInstance);
       } catch (err) {
         console.error('Failed to boot WebContainer:', err);
