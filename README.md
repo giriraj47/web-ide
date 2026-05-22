@@ -87,7 +87,7 @@ This project was developed with a collaborative **AI-Assisted Pair Programming S
 1.  **Architecture & Design Strategy**: AI assisted in laying out the decoupling strategy between the client-side WebContainer execution and backend persistence. This minimized server CPU/memory utilization, moving execution to the edge.
 2.  **WebContainer Bootstrap & Singleton Management**: Writing clean React hooks that boot the async WebContainer can be prone to race conditions (e.g. booting the container multiple times due to React StrictMode or hot-reloading). AI helped configure the singleton pattern `let webcontainerInstance = null` and coordinate its async setup sequence perfectly.
 3.  **Real-time IO Piping**: AI was used to draft clean stream handling, piping the WebContainer's raw output `ReadableStream` into `Xterm.js` and managing the terminal's disposal lifecycle to prevent serious memory leaks.
-4.  **Security Configurations**: AI aided in writing secure Express controllers, structuring JWT token signs and verification middlewares, and ensuring MongoDB credentials/tokens are never committed by advising on environment setups and drafting robust `.gitignore` rules.
+
 
 ### 📋 Chronological Prompt & Instruction Sequence
 
